@@ -8,13 +8,12 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-public class JwsService {
+public class JwtService {
     private static final String SECRET_KEY = "6B58703273357638792F423F4428472B4B6250655368566D597133743677397A";
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getAudience);
